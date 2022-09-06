@@ -1,0 +1,52 @@
+import Calendar from "./Calendar.js";
+import Select from "./Select.js";
+import Time from "./Time.js";
+import Range from "./Range.js";
+import Accordion from "./Accordion.js";
+import Tab from "./Tab.js";
+import File from "./File.js";
+import Textarea from "./Textarea.js";
+import Progress from "./Progress.js";
+import Table from "./Table.js";
+import Dropdown from "./Dropdown.js";
+import Star from "./Star.js";
+import Emotion from "./Emotion.js";
+import SelectAjax from "./ajax/SelectAjax.js";
+import CheckboxAjax from "./ajax/CheckboxAjax.js";
+import {getData} from "./utils.js";
+import RadioAjax from "./ajax/RadioAjax.js";
+import RangeAjax from "./ajax/RangeAjax.js";
+import AccordionAjax from "./ajax/AccordionAjax.js";
+import DropdownAjax from "./ajax/DropdownAjax.js";
+import PaginationAjax from "./ajax/PaginationAjax.js";
+import ProcessAjax from "./ajax/ProcessAjax.js";
+import ProgressAjax from "./ajax/ProgressAjax.js";
+import StarAjax from "./ajax/StarAjax.js";
+
+// 정적
+document.querySelectorAll('.form-select').forEach(el => new Select(el));
+document.querySelectorAll('.form-calendar').forEach(el => new Calendar(el));
+document.querySelectorAll('.form-time').forEach(el => new Time(el));
+document.querySelectorAll('.form-range').forEach(el => new Range(el));
+document.querySelectorAll('.form-file').forEach(el => new File(el));
+document.querySelectorAll('.form-textarea').forEach(el => new Textarea(el));
+document.querySelectorAll('.tabs').forEach(el => new Tab(el));
+document.querySelectorAll('.progress').forEach(el => new Progress(el));
+document.querySelectorAll(".accordion").forEach(el => new Accordion(el));
+document.querySelectorAll('.tabs').forEach(el => new Tab(el));
+document.querySelectorAll('.table').forEach(el => new Table(el));
+document.querySelectorAll('.dropdown').forEach(el => new Dropdown(el));
+document.querySelectorAll('.star').forEach(el => new Star(el));
+document.querySelectorAll('.emotion').forEach(el => new Emotion(el));
+
+// 동적
+getData('http://localhost:3000/select', (data) => new SelectAjax(document.querySelector('.form-select-ajax'), data));
+getData('http://localhost:3000/checkbox', (data) => new CheckboxAjax(document.querySelector('.form-check-ajax'), data));
+getData('http://localhost:3000/checkbox', (data) => new RadioAjax(document.querySelector('.form-radio-ajax'), data));
+getData('http://localhost:3000/range', (data) => new RangeAjax(document.querySelector('.form-range-ajax'), data));
+getData("http://localhost:3000/process", (data) => new ProcessAjax(document.querySelector('.process-ajax'), data));
+getData("http://localhost:3000/progress", (data) => new ProgressAjax(document.querySelector('.progress-ajax'), data));
+getData("http://localhost:3000/pagination", (data) => new PaginationAjax(document.querySelector('.pagination-ajax'), data));
+getData('http://localhost:3000/dropdown', (data) => new DropdownAjax(document.querySelector('.dropdown-ajax'), data));
+getData('http://localhost:3000/accordion', (data) => new AccordionAjax(document.querySelector('.accordion-ajax'), data));
+getData("http://localhost:3000/progress", (data) => new StarAjax(document.querySelector('.star-ajax'), data));

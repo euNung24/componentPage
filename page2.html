@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="./css/calendar.css">
+    <link rel="stylesheet" href="./css/select.css">
+    <link rel="stylesheet" href="./css/time.css">
+    <link rel="stylesheet" href="./css/input.css">
+    <link rel="stylesheet" href="./css/range.css">
+    <link rel="stylesheet" href="css/accordion.css">
+    <link rel="stylesheet" href="css/tab.css">
+    <link rel="stylesheet" href="css/textarea.css">
+    <link rel="stylesheet" href="css/image.css">
+    <link rel="stylesheet" href="css/progress.css">
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/pagination.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/dropdown.css">
+    <link rel="stylesheet" href="css/star.css">
+    <link rel="stylesheet" href="css/emotion.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<a href="index.html" class="btn">page1</a>
+
+
+
+<!-- 회원가입 폼-->
+<div class="container">
+    <h2>회원가입</h2>
+    <form action="#" class="signup-form">
+        <!--            input 컴포넌트 + select 컴포넌트 -->
+        <div class="signup-id form-box">
+            <span class="form-label">아이디</span>
+            <input type="text" name="email-id" class="form-input">
+            <span class="form-text">@</span>
+            <input type="text" name="email-mail" class="form-input">
+            <div class="form-select">
+                <select name="email-mail">
+                    <option value="naver">naver.com</option>
+                    <option value="spain">spain.com</option>
+                    <option value="gmail">gmail.com</option>
+                </select>
+            </div>
+        </div>
+        <!--            input 컴포넌트 -->
+        <div class="signup-password form-box">
+            <label class="password">비밀번호</label>
+            <input type="password" class="form-input" name="password" placeholder="영문, 숫자, 특수문자 포함 9자리 이상">
+        </div>
+        <div class="signup-password2 form-box">
+            <label class="password">비밀번호</label>
+            <input type="password" class="form-input" name="password2" placeholder="비밀번호를 재입력해 주세요">
+        </div>
+        <div class="name form-box">
+            <label for="name">이름</label>
+            <input type="text" class="form-input" name="name" id="name" placeholder="이름">
+        </div>
+        <div class="form-group">
+            <span for="name">휴대폰 번호</span>
+            <div class="form-select form-control">
+                <select name="number-first">
+                    <option value="1">010</option>
+                    <option value="2">011</option>
+                    <option value="3">012</option>
+                </select>
+            </div>
+            <span class="form-text">-</span>
+            <input type="text" class="form-control" name="number-middle">
+            <span class="form-text">-</span>
+            <input type="text" class="form-control" name="name-last">
+        </div>
+        <div class="form-group">
+            <span class="form-label">성별</span>
+            <div class="form-check form-control">
+                <input type="radio" name="male" value="male" id="male">
+                <label for="male">남</label>
+
+                <input type="radio" name="female" value="female" id="female">
+                <label for="female">여</label>
+            </div>
+        </div>
+        <div class="form-box">
+            <span class="form-label">생년월일</span>
+            <div class="form-select">
+                <select name="year">
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                </select>
+            </div>
+            <div class="form-select">
+                <select name="month">
+                    <option value="1">01</option>
+                    <option value="2">02</option>
+                    <option value="3">03</option>
+                    <option value="4">04</option>
+                    <option value="5">05</option>
+                </select>
+            </div>
+            <input type="text" name="day" class="form-input">
+        </div>
+        <button class="btn">버튼</button>
+    </form>
+    <div class="form-calendar">
+        <input type="date" class="form-calendar-input">
+    </div>
+    <div class="form-time" data-start="12:00" data-end="24:00" data-min="30" data-hour="1">
+        <input type="time" name="#" id="@" value="" class="form-time-input">
+    </div>
+</div>
+<!-- range 컴포넌트 -->
+<div>
+    <span class="form-label">예상 투자 비용 범위</span>
+    <div class="form-range" data-min="0" data-max="100" data-min-value="20" data-max-value="80" data-step="10">
+        <input type="range" class="input-left">
+        <input type="range" class="input-right">
+    </div>
+</div>
+<!-- accordion 컴포넌트 -->
+<div class="accordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button  class= "accordion-toggle">
+                인공지능
+            </button>
+        </h2>
+        <ul class="accordion-body">
+            <li class= "accordion-body-item">
+                <a href="#">정보관리기술사</a>
+            </li>
+            <li class= "accordion-body-item">
+                <a href="#">정보처리기능사</a>
+            </li>
+            <li class= "accordion-body-item">
+                <a href="#">정보처리기사</a>
+            </li>
+            <li class= "accordion-body-item">
+                <a href="#">정보처리산업기사</a>
+            </li>
+        </ul>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button  class= "accordion-toggle">
+                인공지능
+            </button>
+        </h2>
+        <ul class="accordion-body">
+            <li class= "accordion-body-item">
+                <a href="#">정보관리기술사</a>
+            </li>
+            <li class= "accordion-body-item">
+                <a href="#">정보처리기능사</a>
+            </li>
+            <li class= "accordion-body-item">
+                <a href="#">정보처리기사</a>
+            </li>
+            <li class= "accordion-body-item">
+                <a href="#">정보처리산업기사</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="tabs">
+    <nav class="tab">
+        <li data-id="#tab1"  class= "tab-item active">소개</li>
+        <li data-id="#tab2" class= "tab-item">포트폴리오</li>
+        <li data-id="#tab3" class= "tab-item">서비스 현황</li>
+    </nav>
+    <div class="tab-list" id="tab1">
+        모든 국민은 헌법과 법률이 정한 법관에 의하여 법률에 의한 재판을 받을 권리를 가진다. 국회의원이 회기전에 체포 또는 구금된 때에는 현행범인이 아닌 한 국회의 요구가 있으면 회기중 석방된다.
+        국가는 여자의 복지와 권익의 향상을 위하여 노력하여야 한다. 모든 국민은 법률이 정하는 바에 의하여 납세의 의무를 진다. 대통령은 법률에서 구체적으로 범위를 정하여 위임받은 사항과 법률을 집행하기 위하여 필요한 사항에 관하여 대통령령을 발할 수 있다.
+    </div>
+    <div class="tab-list" id="tab2">
+        법률안에 이의가 있을 때에는 대통령은 제1항의 기간내에 이의서를 붙여 국회로 환부하고, 그 재의를 요구할 수 있다. 국회의 폐회중에도 또한 같다. 전직대통령의 신분과 예우에 관하여는 법률로 정한다.
+        새로운 회계연도가 개시될 때까지 예산안이 의결되지 못한 때에는 정부는 국회에서 예산안이 의결될 때까지 다음의 목적을 위한 경비는 전년도 예산에 준하여 집행할 수 있다.
+        탄핵소추의 의결을 받은 자는 탄핵심판이 있을 때까지 그 권한행사가 정지된다. 모든 국민은 법률이 정하는 바에 의하여 공무담임권을 가진다. 대법원장은 국회의 동의를 얻어 대통령이 임명한다.</div>
+    <div class="tab-list" id="tab3">
+        대통령의 국법상 행위는 문서로써 하며, 이 문서에는 국무총리와 관계 국무위원이 부서한다. 군사에 관한 것도 또한 같다. 국회는 국가의 예산안을 심의·확정한다.
+        나는 헌법을 준수하고 국가를 보위하며 조국의 평화적 통일과 국민의 자유와 복리의 증진 및 민족문화의 창달에 노력하여 대통령으로서의 직책을 성실히 수행할 것을 국민 앞에 엄숙히 선서합니다.
+        모든 국민은 건강하고 쾌적한 환경에서 생활할 권리를 가지며, 국가와 국민은 환경보전을 위하여 노력하여야 한다. 광물 기타 중요한 지하자원·수산자원·수력과 경제상 이용할 수 있는 자연력은 법률이 정하는 바에 의하여 일정한 기간 그 채취·개발 또는 이용을 특허할 수 있다.
+    </div>
+</div>
+<script src="./js/index.js" type="module"></script>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+.progress, .progress-ajax {
+    background: #bdbdbd;
+    height: 50px;
+}
+
+.progress-bar {
+    background: lightblue;
+    height: 50px;
+}

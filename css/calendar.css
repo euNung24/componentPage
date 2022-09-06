@@ -1,0 +1,67 @@
+.form-calendar-input {
+    display: none;
+}
+
+.calendar {
+    display: none;
+    width: 60%;
+    flex-direction: column;
+    position: absolute;
+    background: #fff;
+}
+
+.calendar.show {
+    display: flex;
+}
+
+.calendar div[class^="week"] {
+    display: flex;
+}
+
+.calendar div[class^="week"] > div {
+    flex: 1;
+    text-align: center;
+}
+
+.calendar .yearMonth {
+    position: relative;
+    height: 70px;
+    width: 100%;
+}
+
+.calendar .yearMonth > * {
+    position: absolute;
+
+}
+
+.calendar .yearMonth .year {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    padding: 5px;
+}
+
+.calendar .yearMonth .month {
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.calendar .yearMonth .calendar-button-group {
+    width: 100%;
+    top: 35px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.day:hover {
+    background: #bdbdbd;
+}
+
+.calendar div[class^="week"] *:first-child {
+    color: red;
+}
+
+.calendar div[class^="week"] *:last-child {
+    color: blue;
+}

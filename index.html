@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Component 모아보기</title>
+    <link rel="stylesheet" href="./css/calendar.css">
+    <link rel="stylesheet" href="./css/select.css">
+    <link rel="stylesheet" href="./css/time.css">
+    <link rel="stylesheet" href="./css/input.css">
+    <link rel="stylesheet" href="./css/range.css">
+    <link rel="stylesheet" href="css/accordion.css">
+    <link rel="stylesheet" href="css/tab.css">
+    <link rel="stylesheet" href="css/textarea.css">
+    <link rel="stylesheet" href="css/image.css">
+    <link rel="stylesheet" href="css/progress.css">
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/pagination.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/dropdown.css">
+    <link rel="stylesheet" href="css/star.css">
+    <link rel="stylesheet" href="css/emotion.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<!--<form action="https://www.naver.com"><button class="btn btn-link">버튼</button></form>-->
+<a href="page2.html" class="btn">page2</a>
+
+<h1>정적</h1>
+<h2>Form Component</h2>
+
+<h3>Input Component</h3>
+<h4>label 포함</h4>
+<div class="form-group">
+    <label class="form-label">Label</label>
+    <input class="form-input" type="text" placeholder="Default input">
+</div>
+<h4>label 생략</h4>
+<input class="form-input" type="text" placeholder="Default input">
+
+<br>
+
+<h3>Select Component</h3>
+<h4>label 포함</h4>
+<div class="form-select form-group">
+    <label class="form-label">Label</label>
+    <select>
+        <option>Open this select menu</option>
+        <option>One</option>
+        <option>Two</option>
+        <option>Three</option>
+    </select>
+</div>
+<h4>label 생략</h4>
+<div class="form-select">
+    <select>
+        <option>Open this select menu</option>
+        <option>One</option>
+        <option>Two</option>
+        <option>Three</option>
+    </select>
+</div>
+
+<br>
+
+<h3>Checkbox Component</h3>
+<h4>label 포함</h4>
+<div class="form-group">
+    <span class="form-label">Label</span>
+    <div class="form-check">
+        <input class="form-input" type="checkbox" placeholder="Default input" id="check1">
+        <label for="check1">check1</label>
+        <input class="form-input" type="checkbox" placeholder="Default input" id="check2">
+        <label for="check2">check2</label>
+    </div>
+</div>
+<h4>label 생략</h4>
+<div class="form-check">
+    <input class="form-input" type="checkbox" placeholder="Default input" id="check3">
+    <label for="check3">check3</label>
+    <input class="form-input" type="checkbox" placeholder="Default input" id="check4">
+    <label for="check4">check4</label>
+</div>
+
+<br>
+
+<h3>Radio Component</h3>
+<h4>label 포함</h4>
+<div class="form-group">
+    <span class="form-label">Label</span>
+    <div class="form-radio">
+        <input class="form-input" name="name" type="radio" placeholder="Default input" id="radio1">
+        <label for="radio1">radio1</label>
+        <input class="form-input" name="name" type="radio" placeholder="Default input" id="radio2">
+        <label for="radio2">radio2</label>
+    </div>
+</div>
+<h4>label 생략</h4>
+<div class="form-radio">
+    <input class="form-input" name="name" type="radio" placeholder="Default input" id="radio3">
+    <label for="radio3">radio3</label>
+    <input class="form-input" name="name" type="radio" placeholder="Default input" id="radio4">
+    <label for="radio4">radio4</label>
+</div>
+
+<br>
+
+<h3>달력 Component + 시간 Component</h3>
+<h4>달력 label 포함</h4>
+<div class="form-group">
+    <label class="form-label">Label</label>
+    <div class="form-calendar">
+        <input class="form-calendar-input" name="date" type="date">
+    </div>
+</div>
+<h4>달력 label 생략</h4>
+<div class="form-calendar">
+    <input class="form-calendar-input" name="date" type="date">
+</div>
+<h4>시간 label 포함</h4>
+<div class="form-group">
+    <label class="form-label">Label</label>
+    <div class="form-time" data-start="12:00" data-end="24:00" data-min="10" data-hour="3">
+        <input class="form-time-input" name="time" type="time">
+    </div>
+</div>
+<h4>시간 label 생략</h4>
+<div class="form-time" data-start="12:00" data-end="24:00" data-min="30" data-hour="1">
+    <input class="form-time-input" name="time" type="time">
+</div>
+
+<br>
+
+<h3>파일 Component</h3>
+<h4>label 포함</h4>
+<div class="form-file form-group">
+    <label class="form-label">Label</label>
+    <input class="form-file-input" name="date" type="file">
+</div>
+<h4>label 생략</h4>
+<div class="form-file form-group">
+    <input class="form-file-input" name="date" type="file">
+</div>
+
+<br>
+
+<h3>textarea Component</h3>
+<h4>label 포함</h4>
+<div class="form-group">
+    <label class="form-label">Label</label>
+    <textarea class="form-textarea" name="date"></textarea>
+</div>
+<h4>label 생략</h4>
+<textarea class="form-textarea textarea-vertical" name="date"></textarea>
+
+<br>
+
+<h3>Range Component</h3>
+<h4>label 포함</h4>
+<div class="form-group">
+    <span class="form-label">Label</span>
+    <div class="form-range" data-min="0" data-max="100" data-min-value="20" data-max-value="70" data-step="10">
+        <input class="input-left" name="range">
+        <input class="input-right" name="range">
+    </div>
+</div>
+<h4>label 생략</h4>
+<div class="form-range" data-min="0" data-max="100" data-min-value="20" data-max-value="70" data-step="10">
+    <input class="input-left" name="range">
+    <input class="input-right" name="range">
+</div>
+
+<h2>UI Component</h2>
+
+<h3>Button Component</h3>
+<button class="btn">Button</button>
+
+<br>
+
+<h3>Text Component</h3>
+<p class="text">
+    국가는 과학기술의 혁신과 정보 및 인력의 개발을 통하여 국민경제의 발전에 노력하여야 한다. 공무원의 신분과 정치적 중립성은 법률이 정하는 바에 의하여 보장된다.
+
+    모든 국민은 주거의 자유를 침해받지 아니한다. 주거에 대한 압수나 수색을 할 때에는 검사의 신청에 의하여 법관이 발부한 영장을 제시하여야 한다. 국무위원은 국무총리의 제청으로 대통령이 임명한다.
+</p>
+
+<br>
+
+<h3>Image Component</h3>
+<h4>div > src</h4>
+<div class="img">
+    <img src="./images/bear.jpg" class="img-cover">
+</div>
+<div class="img">
+    <img src="./images/bear.jpg" class="img-contain">
+</div>
+<div class="img">
+    <img src="./images/bear.jpg" class="image-fill">
+</div>
+
+<h4>figure > img + figcaption</h4>
+<figure class="img">
+    <img src="./images/bear.jpg" class="img-cover">
+    <figcaption class="img-caption">곰도리</figcaption>
+</figure>
+<figure class="img">
+    <img src="./images/bear.jpg" class="img-contain">
+    <figcaption class="img-caption">곰도리</figcaption>
+</figure>
+<figure class="img">
+    <img src="./images/bear.jpg" class="image-fill">
+    <figcaption class="img-caption">곰도리</figcaption>
+</figure>
+
+<br>
+
+<h3>Progress Component</h3>
+<h4>정수</h4>
+<div class="progress" data-min="0" data-max="10" data-value="3">
+    <div class="progress-bar"></div>
+</div>
+<h4>소수</h4>
+<div class="progress" data-min="0" data-max="1" data-value="0.7">
+    <div class="progress-bar"></div>
+</div>
+<div class="progress" data-min="0" data-max="100" data-value="93.7">
+    <div class="progress-bar"></div>
+</div>
+
+<h3>Table Component</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th colspan="2">구분</th>
+            <th colspan="2">점수</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th colspan="4">기반역량</th>
+        </tr>
+        <tr>
+            <td>인성</td>
+            <td>전체평균</td>
+            <td>
+                <div style="height: 16px" class="progress" data-min="0" data-max="5" data-value="4.5">
+                    <div style="height: 16px" class="progress-bar"></div>
+                </div>
+            </td>
+            <td>4.5</td>
+        </tr>
+        <tr>
+            <td>기초학력</td>
+            <td>전체평균</td>
+            <td>
+                <div style="height: 16px" class="progress" data-min="0" data-max="5" data-value="3.5">
+                    <div style="height: 16px" class="progress-bar"></div>
+                </div>
+            </td>
+            <td>3.5</td>
+        </tr>
+        <tr>
+            <td>자기관리</td>
+            <td>전체평균</td>
+            <td>
+                <div style="height: 16px" class="progress" data-min="0" data-max="5" data-value="4.0">
+                    <div style="height: 16px" class="progress-bar"></div>
+                </div>
+            </td>
+            <td>4.5</td>
+        </tr>
+        <tr>
+            <td>정보 IT</td>
+            <td>전체평균</td>
+            <td>
+                <div style="height: 16px" class="progress" data-min="0" data-max="5" data-value="4.5">
+                    <div style="height: 16px" class="progress-bar"></div>
+                </div>
+            </td>
+            <td>4.5</td>
+        </tr>
+    </tbody>
+</table>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">직무</th>
+        <th scope="col">점수</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th rowspan="4">인공지능 플랫폼 구축</th>
+        <td rowspan="2">전체 평균</td>
+        <td>바</td>
+        <td>3.5</td>
+    </tr>
+    <tr>
+        <th scope="row"></th>
+        <td></td>
+        <td>바</td>
+        <td>3.7</td>
+    </tr>
+    <tr>
+        <th scope="row"></th>
+        <td rowspan="2">기준치</td>
+        <td>바</td>
+        <td>3.7</td>
+    </tr>
+    <tr>
+        <th scope="row"></th>
+        <td></td>
+        <td>바</td>
+        <td>3.7</td>
+    </tr>
+    <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+    </tr>
+    <tr>
+        <th scope="row">2</th>
+        <td></td>
+        <td>ThorntonLarry the BirdLarry the Bird</td>
+        <td>@fatLarry the BirdLarry the Bird</td>
+    </tr>
+
+    </tbody>
+</table>
+<br>
+
+<h3>Pagination Component</h3>
+<nav>
+    <ul class="pagination">
+        <li  class= "page-item">
+            <a href="#"  class= "page-link">&lt;</a>
+        </li>
+        <li  class= "page-item active">
+            <a href="#" class= "page-link">1</a>
+        </li>
+        <li  class= "page-item">
+            <a href="#" class= "page-link">2</a>
+        </li>
+        <li  class= "page-item">
+            <a href="#" class= "page-link">&gt</a>
+        </li>
+    </ul>
+</nav>
+
+<br>
+
+<h3>Navigation Component</h3>
+<nav class="navbar">
+    <a href="#" class="nav-brand">
+        <img src="./images/bear.jpg">
+        Component
+    </a>
+    <ul class="nav">
+        <li  class="nav-item">
+            <a href="#" class="nav-link">menu1</a>
+        </li>
+        <li  class="nav-item dropdown active">
+            <a href="#" class="nav-link dropdown-toggle">menu2</a>
+            <ul class="dropdown-menu">
+                <li class="dropdown-item"><a href="#">menu2-1</a></li>
+                <li class="dropdown-item"><a href="#">menu2-2</a></li>
+                <li class="dropdown-item"><a href="#">menu2-3</a></li>
+                <li class="dropdown-item"><a href="#">menu2-4</a></li>
+            </ul>
+        </li>
+        <li  class="nav-item">
+            <a href="#" class="nav-link">menu3</a>
+        </li>
+        <li  class="nav-item">
+            <a href="#" class="nav-link">menu4</a>
+        </li>
+    </ul>
+</nav>
+
+<br>
+
+<h3>Tab Component</h3>
+<div class="tabs">
+    <nav class="tab">
+        <li data-id="#tab5" class="tab-item active">소개</li>
+        <li data-id="#tab6" class="tab-item">포트폴리오</li>
+        <li data-id="#tab7" class="tab-item">받은 평가</li>
+        <li data-id="#tab8" class="tab-item">서비스 현황</li>
+    </nav>
+    <div class="tab-list " id="tab5">
+        우는 우리의 방지하는 뜨거운지라, 이것이다. 인간에 반짝이는 노래하며 일월과 밥을 사막이다. 사는가 광야에서 튼튼하며, 바로 우리의 구할 생생하며, 끓는 돋고, 봄바람이다. 피어나는 풍부하게 열락의 투명하되 불어 심장의 힘있다. 그들은 피가 피어나기 긴지라 청춘의 우리의 그들의 봄바람을 하였으며, 것이다. 힘차게 위하여, 노래하며 구하지 있는 뭇 시들어 것이다. 하는 것이 것은 무한한 이것이다. 끓는 낙원을 장식하는 들어 때까지 되려니와, 보는 철환하였는가? 붙잡아 스며들어 그들은 그림자는 목숨이 산야에 인생에 얼마나 우는 것이다. 심장의 들어 두기 그와 공자는 이상 그림자는 것이 것이다. 만천하의 긴지라 석가는 이상 것은 찾아다녀도, 것이다.
+    </div>
+    <div class="tab-list" id="tab6">
+        얼음과 열락의 가장 트고, 같이, 거선의 위하여서. 청춘의 원질이 우리의 그들의 얼마나 풍부하게 투명하되 아름다우냐? 보는 생명을 대고, 대한 귀는 봄바람을 남는 두기 사는가 것이다. 찾아다녀도, 공자는 길을 내는 끝에 이상 이상 있는 부패뿐이다. 때에, 우리의 풍부하게 피는 인생을 고행을 것이다. 인간은 인간이 산야에 것이다. 끝에 이것이야말로 인간에 든 생생하며, 있는가? 날카로우나 열매를 청춘 청춘의 운다. 그것을 이것이야말로 가장 인도하겠다는 피어나기 말이다. 옷을 미인을 있으며, 때문이다.
+    </div>
+    <div class="tab-list" id="tab7">
+        긴지라 풀밭에 일월과 살 가슴에 작고 뿐이다. 풀밭에 소리다.이것은 희망의 온갖 스며들어 석가는 뿐이다. 있음으로써 인류의 주는 소리다.이것은 보배를 우리 웅대한 사라지지 봄바람이다. 사랑의 청춘을 낙원을 그들의 굳세게 봄바람을 미인을 그리하였는가? 천하를 어디 예가 얼마나 꽃이 품었기 소리다.이것은 듣는다. 이상의 곳으로 보배를 끝에 찬미를 곳이 황금시대의 앞이 그리하였는가? 이상은 불어 피가 하였으며, 것이다. 산야에 튼튼하며, 같이 가슴이 것이다.보라, 것이다. 방황하여도, 이것은 같은 귀는 설산에서 싸인 사막이다.
+    </div>
+    <div class="tab-list" id="tab8">
+        끓는 청춘을 이것을 원대하고, 이것이다. 예가 있는 얼음 끓는 구하지 원질이 미인을 것이다. 무엇이 청춘 구할 풀이 두기 위하여 없는 듣는다. 이상 위하여서 천자만홍이 것이다. 우리 방황하였으며, 청춘 이것이다. 날카로우나 온갖 불러 듣는다. 옷을 전인 청춘 예수는 것이다. 평화스러운 이것은 얼음 노래하며 않는 있음으로써 무엇을 황금시대의 산야에 교향악이다. 인간의 부패를 풍부하게 것이다. 만물은 따뜻한 것은 웅대한 천지는 인생의 소담스러운 희망의 사는가 봄바람이다.
+    </div>
+</div>
+
+<br>
+
+<h3>Dropdown Component</h3>
+<div class="dropdown">
+    <a class="dropdown-toggle">정보검색</a>
+    <ul class="dropdown-menu">
+        <li class="dropdown-item">
+            <a href="#">학교정보</a>
+        </li>
+        <li class="dropdown-item">
+            <a href="#">자격증 정보</a>
+        </li>
+        <li class="dropdown-item">
+            <a href="#">직업 정보</a>
+        </li>
+        <li class="dropdown-item">
+            <a href="#">전문가 정보</a>
+        </li>
+    </ul>
+</div>
+
+<br>
+
+<div class="accordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button  class= "accordion-toggle" id="accordionMenu1">
+                인공지능
+            </button>
+        </h2>
+        <ul class="accordion-body">
+            <li class= "accordion-body-item">
+                <a href="#">정보관리기술사</a>
+            </li>
+            <li class= "accordion-body-item">
+                <a href="#">정보처리기능사</a>
+            </li>
+            <li class= "accordion-body-item">
+                <a href="#">정보처리기사</a>
+            </li>
+            <li class= "accordion-body-item">
+                <a href="#">정보처리산업기사</a>
+            </li>
+        </ul>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button  class= "accordion-toggle" id="accordionMenu2">
+                인공지능
+            </button>
+        </h2>
+        <ul class="accordion-body">
+            <li class= "accordion-body-item">
+                <a href="#">정보관리기술사</a>
+            </li>
+            <li class= "accordion-body-item">
+                <a href="#">정보처리기능사</a>
+            </li>
+            <li class= "accordion-body-item">
+                <a href="#">정보처리기사</a>
+            </li>
+            <li class= "accordion-body-item">
+                <a href="#">정보처리산업기사</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<br>
+
+<h3>Star Component</h3>
+<div class="star" data-min="0" data-max="5" data-value="3.5">
+</div>
+
+<br>
+<h3>Emotion Component</h3>
+<div class="emotion">
+
+</div>
+
+<hr>
+
+<h1>동적</h1>
+<h2>Form Component</h2>
+
+<h3>Select Component</h3>
+<h4>label 포함</h4>
+<div class="form-select-ajax form-group">
+    <label class="form-label">Label</label>
+    <select>
+        <option>Open this select menu</option>
+        <option>One</option>
+        <option>Two</option>
+        <option>Three</option>
+    </select>
+</div>
+<h4>label 생략</h4>
+<div class="form-select-ajax">
+    <select>
+        <option>Open this select menu</option>
+        <option>One</option>
+        <option>Two</option>
+        <option>Three</option>
+    </select>
+</div>
+
+<br>
+
+<h3>Checkbox Component</h3>
+<h4>label 포함</h4>
+<div class="form-group">
+    <span class="form-label">Label</span>
+    <div class="form-check-ajax">
+    </div>
+</div>
+<h4>label 생략</h4>
+<div class="form-check-ajax">
+</div>
+
+<br>
+
+<h3>Radio Component</h3>
+<h4>label 포함</h4>
+<div class="form-group">
+    <span class="form-label">Label</span>
+    <div class="form-radio-ajax">
+    </div>
+</div>
+<h4>label 생략</h4>
+<div class="form-radio-ajax">
+</div>
+
+<br>
+
+<h3>Range Component</h3>
+<h4>label 포함</h4>
+<div class="form-group">
+    <span class="form-label">Label</span>
+    <div class="form-range-ajax">
+        <input class="input-left" type="range">
+        <input class="input-right" type="range">
+    </div>
+</div>
+<h4>label 생략</h4>
+<div class="form-range-ajax">
+    <input class="input-left" type="range">
+    <input class="input-right" type="range">
+</div>
+
+<h2>UI Component</h2>
+<h3>Progress Component</h3>
+<h4>정수</h4>
+<div class="progress-ajax">
+    <div class="progress-bar"></div>
+</div>
+<h4>소수</h4>
+<div class="progress-ajax">
+    <div class="progress-bar"></div>
+</div>
+<div class="progress-ajax">
+    <div class="progress-bar"></div>
+</div>
+
+<br>
+
+<h3>Pagination Component</h3>
+<nav>
+    <ul class="pagination-ajax">
+    </ul>
+</nav>
+
+<br>
+
+<h3>Dropdown Component</h3>
+<div class="dropdown-ajax">
+</div>
+
+<br>
+
+<div class="accordion-ajax">
+</div>
+
+<br>
+
+<h3>Star Component</h3>
+<div class="star-ajax">
+</div>
+
+<br>
+<h3>Emotion Component</h3>
+<div class="emotion">
+
+</div>
+    <script src="./js/index.js" type="module"></script>
+</body>
+</html>

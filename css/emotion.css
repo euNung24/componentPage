@@ -1,0 +1,38 @@
+.clicked-emotion {
+    width: 20px;
+    height: 20px;
+}
+
+.emotion-group {
+    display: none;
+}
+
+.emotion-group > * {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    vertical-align: middle;
+}
+
+.emotion-group > *:hover {
+    background-color: #bdbdbd;
+}
+.emotion-good {
+    background: url("../images/emoji-smile.svg") no-repeat center;
+}
+.emotion-sad {
+    background: url("../images/emoji-frown.svg") no-repeat center;
+}
+.emotion-like {
+    background: url("../images/emoji-heart-eyes.svg") no-repeat center;
+}
+.emotion-bad {
+    background: url("../images/emoji-angry.svg") no-repeat center;
+}
+.emotion-thumbsUp {
+    background: url("../images/hand-thumbs-up.svg") no-repeat center;
+}
+.emotion-thumbsDown {
+    background: url("../images/hand-thumbs-down.svg") no-repeat center;
+}

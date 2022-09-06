@@ -1,0 +1,24 @@
+.container form > div {
+    margin: 10px;
+}
+
+/* 추가 */
+.form-box > * {
+    display: inline-block;
+}
+
+.form-input {
+    border: 1px solid #bdbdbd;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+
+.btn {
+    border: none;
+    background: lightblue;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+

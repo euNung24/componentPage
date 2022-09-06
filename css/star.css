@@ -1,0 +1,18 @@
+.star > *, .star-ajax > * {
+    display: inline-block;
+}
+.star-group > * {
+    vertical-align: middle;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+.star-fill {
+    background: url(../images/star-fill.svg) no-repeat;
+}
+.star-half {
+    background: url(../images/star-half.svg) no-repeat;
+}
+.star-empty {
+    background: url(../images/star.svg) no-repeat;
+}

@@ -1,0 +1,14 @@
+.table, .table thead, .table tbody, .table tfoot {
+    display: flex;
+    flex-direction: column;
+}
+
+.table tr {
+    display: flex;
+    flex-direction: row;
+}
+
+.table tr th, .table tr td {
+    flex: 1;
+    text-align: center;
+}

@@ -1,0 +1,108 @@
+{
+  "select": [
+    {
+      "id": 0,
+      "value": "Select car:"
+    },
+    {
+      "id": 1,
+      "value": "Audi"
+    },
+    {
+      "id": 2,
+      "value": "BMW"
+    },
+    {
+      "id": 3,
+      "value": "Citroen"
+    },
+    {
+      "id": 4,
+      "value": "Ford"
+    },
+    {
+      "id": 5,
+      "value": "Honda"
+    }
+  ],
+  "checkbox": [
+    {
+      "id": 0,
+      "value": "zero"
+    },
+    {
+      "id": 1,
+      "value": "one"
+    },
+    {
+      "id": 2,
+      "value": "two"
+    }
+  ],
+  "range": {
+    "max": 10,
+    "min": 0,
+    "minValue": 3,
+    "maxValue": 7,
+    "step": 1
+  },
+  "process": [
+    {
+      "text": "기반역량",
+      "active": true
+    },{
+      "text": "리더십역량",
+      "active": false
+    },{
+      "text": "직무공통역량",
+      "active": false
+    },{
+      "text": "직업공통역량",
+      "active": false
+    }
+  ],
+  "progress": {
+    "min": 0,
+    "max": 10,
+    "value": 4
+  },
+  "pagination": {
+    "totalCount": 10,
+    "start": 1,
+    "end": 9,
+    "prev": false,
+    "next": true,
+    "displayPageNum": 10,
+    "currentPage": 1
+  },
+  "dropdown": {
+    "title": "정보검색",
+    "titleUrl": "#",
+    "items": [
+      {
+        "value": "학교/학과 정보",
+        "itemUrl": "#"
+      },{
+        "value": "자격증 정보",
+        "itemUrl": "#"
+      },{
+        "value": "직업 정보",
+        "itemUrl": "#"
+      }
+    ]
+  },
+  "accordion": [{
+    "title": "인공지능",
+    "items": [
+      {
+        "text": "정보처리기술사"
+      },{
+        "text": "정보처리기능사"
+      },{
+        "text": "정보처리기사"
+      },{
+        "text": "정보처리산업기사"
+      }
+    ]
+  }]
+}

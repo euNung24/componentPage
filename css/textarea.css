@@ -1,0 +1,15 @@
+.form-textarea {
+    resize: none;
+}
+
+.textarea-vertical {
+    resize: vertical;
+}
+
+.textarea-horizontal {
+    resize: horizontal;
+}
+
+.textarea-auto {
+    resize: both;
+}

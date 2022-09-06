@@ -1,0 +1,19 @@
+.tabs {
+    margin-top: 10px;
+}
+
+.tab-item {
+    display: inline-block;
+    border: 1px solid #bdbdbd;
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+
+.tab-item.active {
+    background: lightblue;
+}
+
+.tab-list {
+    width: 40%;
+    display: none;
+}
