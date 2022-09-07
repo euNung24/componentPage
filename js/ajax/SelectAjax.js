@@ -6,8 +6,9 @@ export default class SelectAjax extends Component{
     setElements() {
         this.select = this.$element.querySelector('select');
         console.log(this.select, this.$data);
-        this.select.innerHTML = `${this.$data.map(el => `<option value="${el.value}">${el.text}</option>`).join('')}`;
+        this.select.innerHTML = `${this.$data.map(el => `<option value="${el.id}">${el.value}</option>`).join('')}`;
         this.options = Array.from(this.$element.querySelectorAll('option'));
+        console.log(this.select, this.options)
         let template = document.createElement('template');
         let fragment = new DocumentFragment();
         template.innerHTML = `

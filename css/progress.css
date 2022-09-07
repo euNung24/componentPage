@@ -4,6 +4,15 @@
 }
 
 .progress-bar {
+    position: relative;
     background: lightblue;
     height: 50px;
+}
+
+.progress-value {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    padding: 0 10px;
 }

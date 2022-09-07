@@ -119,12 +119,12 @@
 <h4>시간 label 포함</h4>
 <div class="form-group">
     <label class="form-label">Label</label>
-    <div class="form-time" data-start="12:00" data-end="24:00" data-min="10" data-hour="3">
+    <div class="form-time" data-start="12:10" data-end="24:00" data-min="10" data-hour="3">
         <input class="form-time-input" name="time" type="time">
     </div>
 </div>
 <h4>시간 label 생략</h4>
-<div class="form-time" data-start="12:00" data-end="24:00" data-min="30" data-hour="1">
+<div class="form-time" data-start="12:50" data-end="24:00" data-min="30" data-hour="1">
     <input class="form-time-input" name="time" type="time">
 </div>
 
@@ -134,7 +134,7 @@
 <h4>label 포함</h4>
 <div class="form-file form-group">
     <label class="form-label">Label</label>
-    <input class="form-file-input" name="date" type="file">
+    <input class="form-file-input" name="date" type="file" multiple>
 </div>
 <h4>label 생략</h4>
 <div class="form-file form-group">
@@ -164,7 +164,7 @@
     </div>
 </div>
 <h4>label 생략</h4>
-<div class="form-range" data-min="0" data-max="100" data-min-value="20" data-max-value="70" data-step="10">
+<div class="form-range" data-min="0" data-max="5" data-min-value="2" data-max-value="3" data-step="0.5">
     <input class="input-left" name="range">
     <input class="input-right" name="range">
 </div>
@@ -173,7 +173,8 @@
 
 <h3>Button Component</h3>
 <button class="btn">Button</button>
-
+<button class="btn" data-link="https://naver.com/">target X</button>
+<button class="btn" data-link="https://naver.com/" data-target="true">target O</button>
 <br>
 
 <h3>Text Component</h3>
@@ -222,7 +223,7 @@
 <div class="progress" data-min="0" data-max="1" data-value="0.7">
     <div class="progress-bar"></div>
 </div>
-<div class="progress" data-min="0" data-max="100" data-value="93.7">
+<div class="progress" data-min="0" data-max="100" data-value="93.756">
     <div class="progress-bar"></div>
 </div>
 
@@ -242,7 +243,7 @@
             <td>인성</td>
             <td>전체평균</td>
             <td>
-                <div style="height: 16px" class="progress" data-min="0" data-max="5" data-value="4.5">
+                <div style="height: 16px" class="progress" data-min="0" data-max="5" data-value="4.8">
                     <div style="height: 16px" class="progress-bar"></div>
                 </div>
             </td>
@@ -272,7 +273,7 @@
             <td>정보 IT</td>
             <td>전체평균</td>
             <td>
-                <div style="height: 16px" class="progress" data-min="0" data-max="5" data-value="4.5">
+                <div style="height: 16px" class="progress" data-min="0" data-max="5" data-value="4.6">
                     <div style="height: 16px" class="progress-bar"></div>
                 </div>
             </td>
@@ -283,8 +284,8 @@
 <table class="table">
     <thead>
     <tr>
-        <th scope="col">직무</th>
-        <th scope="col">점수</th>
+        <th scope="col" colspan="2">직무</th>
+        <th scope="col" colspan="2">점수</th>
     </tr>
     </thead>
     <tbody>
@@ -319,8 +320,7 @@
     </tr>
     <tr>
         <th scope="row">2</th>
-        <td></td>
-        <td>ThorntonLarry the BirdLarry the Bird</td>
+        <td colspan="2">ThorntonLarry the BirdLarry the Bird</td>
         <td>@fatLarry the BirdLarry the Bird</td>
     </tr>
 
@@ -474,6 +474,9 @@
 <div class="star" data-min="0" data-max="5" data-value="3.5">
 </div>
 
+<div class="star eval" data-min="0" data-max="5" data-value="3.5">
+</div>
+
 <br>
 <h3>Emotion Component</h3>
 <div class="emotion">
@@ -496,15 +499,15 @@
         <option>Three</option>
     </select>
 </div>
-<h4>label 생략</h4>
-<div class="form-select-ajax">
-    <select>
-        <option>Open this select menu</option>
-        <option>One</option>
-        <option>Two</option>
-        <option>Three</option>
-    </select>
-</div>
+<!--<h4>label 생략</h4>-->
+<!--<div class="form-select-ajax">-->
+<!--    <select>-->
+<!--        <option>Open this select menu</option>-->
+<!--        <option>One</option>-->
+<!--        <option>Two</option>-->
+<!--        <option>Three</option>-->
+<!--    </select>-->
+<!--</div>-->
 
 <br>
 
@@ -515,9 +518,9 @@
     <div class="form-check-ajax">
     </div>
 </div>
-<h4>label 생략</h4>
-<div class="form-check-ajax">
-</div>
+<!--<h4>label 생략</h4>-->
+<!--<div class="form-check-ajax">-->
+<!--</div>-->
 
 <br>
 
@@ -528,9 +531,9 @@
     <div class="form-radio-ajax">
     </div>
 </div>
-<h4>label 생략</h4>
-<div class="form-radio-ajax">
-</div>
+<!--<h4>label 생략</h4>-->
+<!--<div class="form-radio-ajax">-->
+<!--</div>-->
 
 <br>
 
@@ -543,11 +546,11 @@
         <input class="input-right" type="range">
     </div>
 </div>
-<h4>label 생략</h4>
-<div class="form-range-ajax">
-    <input class="input-left" type="range">
-    <input class="input-right" type="range">
-</div>
+<!--<h4>label 생략</h4>-->
+<!--<div class="form-range-ajax">-->
+<!--    <input class="input-left" type="range">-->
+<!--    <input class="input-right" type="range">-->
+<!--</div>-->
 
 <h2>UI Component</h2>
 <h3>Progress Component</h3>
@@ -555,13 +558,13 @@
 <div class="progress-ajax">
     <div class="progress-bar"></div>
 </div>
-<h4>소수</h4>
-<div class="progress-ajax">
-    <div class="progress-bar"></div>
-</div>
-<div class="progress-ajax">
-    <div class="progress-bar"></div>
-</div>
+<!--<h4>소수</h4>-->
+<!--<div class="progress-ajax">-->
+<!--    <div class="progress-bar"></div>-->
+<!--</div>-->
+<!--<div class="progress-ajax">-->
+<!--    <div class="progress-bar"></div>-->
+<!--</div>-->
 
 <br>
 
@@ -589,8 +592,8 @@
 </div>
 
 <br>
-<h3>Emotion Component</h3>
-<div class="emotion">
+<!--<h3>Emotion Component</h3>-->
+<!--<div class="emotion">-->
 
 </div>
     <script src="./js/index.js" type="module"></script>

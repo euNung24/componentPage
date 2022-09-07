@@ -22,6 +22,7 @@ import PaginationAjax from "./ajax/PaginationAjax.js";
 import ProcessAjax from "./ajax/ProcessAjax.js";
 import ProgressAjax from "./ajax/ProgressAjax.js";
 import StarAjax from "./ajax/StarAjax.js";
+import ButtonLink from "./Button.js";
 
 // 정적
 document.querySelectorAll('.form-select').forEach(el => new Select(el));
@@ -30,6 +31,7 @@ document.querySelectorAll('.form-time').forEach(el => new Time(el));
 document.querySelectorAll('.form-range').forEach(el => new Range(el));
 document.querySelectorAll('.form-file').forEach(el => new File(el));
 document.querySelectorAll('.form-textarea').forEach(el => new Textarea(el));
+document.querySelectorAll('.btn[data-link]').forEach(el => new ButtonLink(el));
 document.querySelectorAll('.tabs').forEach(el => new Tab(el));
 document.querySelectorAll('.progress').forEach(el => new Progress(el));
 document.querySelectorAll(".accordion").forEach(el => new Accordion(el));

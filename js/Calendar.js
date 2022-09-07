@@ -4,6 +4,7 @@ export default class Calendar extends Component {
     setElements() {
         this.year = new Date().getFullYear();
         this.month = new Date().getMonth() + 1;
+        this.state = {}
 
         const template = document.createElement('template');
         const fragment = new DocumentFragment();
@@ -59,22 +60,31 @@ export default class Calendar extends Component {
     }
 
     render() {
-        fetch(`http://apis.data.go.kr/B090041/openapi/service/SpcdeInfoService/getHoliDeInfo?solYear=${this.year}&solMonth=${this.setTwoDigits(this.month)}&_type=json&ServiceKey=T9vZVWD4DUCcBZITtVWmnhlD5hkaLI%2BVQcpHsxNuUdqSYscKbqO6KWnV0PQAgFIvV89g%2BjEirNcPf60sC7C2CA%3D%3D`)
-            .then(response => response.json())
-            .then(data => {
-                console.log(typeof data.response.body.items.item, Array.isArray(data.response.body.items.item))
-                    if(data.response.body.totalCount == 1) {
-                        this.holiArr = data.response.body.items.item.isHoliday === 'Y' ? [data.response.body.items.item.locdate.toString().substring(6, 8)] : [];
-                    } else if(data.response.body.totalCount > 1) {
-                        this.holiArr = Array.from(data.response.body.items.item).map(data => data.isHoliday === 'Y' && data.locdate.toString().substring(6, 8)) || [];
-                    } else {
-                        this.holiArr = [];
+        if(this.state[`${this.year}-${this.month}`]) {
+            this.holiArr = [...this.state[`${this.year}-${this.month}`]];
+            console.log(this.holiArr, this.state)
+            this.$element.querySelector('.calendar').innerHTML = this.setTemplate();
+            this.holiArr.map(day => this.$element.querySelectorAll('.day')[+day - 1].style.color = "red");
+        } else {
+            fetch(`http://apis.data.go.kr/B090041/openapi/service/SpcdeInfoService/getHoliDeInfo?solYear=${this.year}&solMonth=${this.setTwoDigits(this.month)}&_type=json&ServiceKey=T9vZVWD4DUCcBZITtVWmnhlD5hkaLI%2BVQcpHsxNuUdqSYscKbqO6KWnV0PQAgFIvV89g%2BjEirNcPf60sC7C2CA%3D%3D`)
+                .then(response => response.json())
+                .then(data => {
+                        if(typeof data.response.body.items.item === 'undefined') {
+                            this.holiArr = [];
+                        } else if(Array.isArray(data.response.body.items.item)) {
+                            this.holiArr = data.response.body.items.item.map(data => data.isHoliday === 'Y' && data.locdate.toString().substring(6, 8)) || [];
+                        } else if(typeof data.response.body.items.item === 'object') {
+                            this.holiArr =  data.response.body.items.item.isHoliday === 'Y' ? [data.response.body.items.item.locdate.toString().substring(6, 8)]: [];
+                        }
+                        this.state[`${this.year}-${this.month}`] = this.holiArr;
+                        this.$element.querySelector('.calendar').innerHTML = this.setTemplate();
+                        this.holiArr.map(day => this.$element.querySelectorAll('.day')[+day - 1].style.color = "red");
                     }
-                    this.$element.querySelector('.calendar').innerHTML = this.setTemplate();
-                    console.log(this.holiArr)
-                    this.holiArr.map(day => this.$element.querySelectorAll('.day')[+day - 1].style.color = "red")
-                }
-            );
+                );
+        }
+
+
+
     }
 
     setEvents() {

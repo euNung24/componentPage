@@ -5,8 +5,12 @@ export default class Time extends Component {
         let template = document.createElement('template');
         let fragment = new DocumentFragment();
 
+        const { start, end, min, hour } = this.$element.dataset;
+        const [startHour, startMin] = start.split(':').map(el => parseInt(el, 10));
+        let [endHour, endMin] = end.split(':').map(el => parseInt(el, 10));
+
         template.innerHTML = `
-        <p class="selected-time"><span class="selected-hour">${this.setTwoDigits(new Date().getHours())}</span> : <span class="selected-minute">${this.setTwoDigits(new Date().getMinutes())}</span></p>
+        <p class="selected-time"><span class="selected-hour">${this.setTwoDigits(startHour)}</span> : <span class="selected-minute">${this.setTwoDigits(startMin)}</span></p>
         <button class="toggle-button">시간</button>
         <div class="time-wrapper">
             <div class="hour-box">
@@ -24,10 +28,6 @@ export default class Time extends Component {
 
         const timeWrapper = this.$element.querySelector('.time-wrapper');
 
-        const { start, end, min, hour } = this.$element.dataset;
-        console.log(start, this.$element)
-        const [startHour, startMin] = start.split(':').map(el => parseInt(el, 10));
-        let [endHour, endMin] = end.split(':').map(el => parseInt(el, 10));
 
         const hourDiv = document.createElement('div');
         for (let i = startHour; i <= endHour; i += parseInt(hour, 10)) {
@@ -39,7 +39,17 @@ export default class Time extends Component {
 
         const minDiv = document.createElement('div');
 
-        for (let i = 0; i < 60; i += parseInt(min, 10)) {
+        const minLength = Math.floor(60 / parseInt(min, 10));
+        let minMin = parseInt(startMin, 10);
+        for (let i = 0; i < minLength; i++) {
+            if(minMin >= 60) {
+                minMin -= 60;
+                break;
+            }
+
+            minMin += parseInt(min, 10);
+        }
+        for (let i = minMin; i < 60; i += parseInt(min, 10)) {
             const template = document.createElement('template');
             template.innerHTML = `<div>${this.setTwoDigits(i)}</div>`
             minDiv.appendChild(template.content);

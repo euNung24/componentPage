@@ -1,10 +1,11 @@
 .form-range, .form-range-ajax {
     position: relative;
-    width: 300px;
+    width: 400px;
 }
 
 .slider {
     position: relative;
+    width: 100%;
     height: 10px;
     border-radius: 15px;
     /*z-index: 1;*/
@@ -37,6 +38,7 @@
 }
 
 .slider .thumb {
+    /*display: none;*/
     position: absolute;
     width: 15px;
     height: 15px;
@@ -53,7 +55,7 @@
 
 .slider .thumb.right {
     top: 50%;
-    transform: translate(-30%, -50%);
+    transform: translateY(-50%);
 }
 
 .slider .thumb span {
@@ -72,7 +74,7 @@ input[type="range"] {
     opacity: 0;
 }
 
-input[type="range"]::-webkit-slider-thumb {
+input[type="range"]::-ms-thumb {
     /* 겹쳐진 두 thumb를 모두 활성화 */
     pointer-events: all;
     width: 15px;
@@ -85,12 +87,39 @@ input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
 }
 
+input[type="range"]::-moz-range-thumb {
+    /* 겹쳐진 두 thumb를 모두 활성화 */
+    pointer-events: all;
+    width: 15px;
+    height: 15px;
+    border-radius: 0;
+    border: 0 none;
+    background-color: red;
+    cursor: pointer;
+    /* appearance를 해야 위의 스타일들을 볼 수 있음 */
+    -webkit-appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    /* 겹쳐진 두 thumb를 모두 활성화 */
+    pointer-events: all;
+    width: 15px;
+    height: 20px;
+    border-radius: 0;
+    border: 0 none;
+    background-color: red;
+    cursor: pointer;
+    /* appearance를 해야 위의 스타일들을 볼 수 있음 */
+    -webkit-appearance: none;
+}
+
 .step {
     position: absolute;
     display: block;
-    width: 10px;
+    width: 1px;
     height: 10px;
     background: antiquewhite;
     z-index: -1;
+    transform: translateX(7.5px);
     /*z-index: 3;*/
 }
