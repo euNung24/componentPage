@@ -43,11 +43,30 @@ export default class Star extends Component {
             this.renderStar({clientIndex: index,  isOverHalf});
         })
 
-        this.$element.addEventListener('click', ({target}) => {
-            this.lockedStar = true;
-
+        this.$element.addEventListener('click', (e) => {
+            const { target } = e;
             if(target.classList.contains("reset-btn")) {
+                this.$element.querySelector('.checked')?.classList.remove("checked");
                 this.lockedStar = false;
+            }
+
+            if(target.classList.contains("star-item")) {
+                if(target.classList.contains("checked")) {
+                    this.$element.querySelector('.checked')?.classList.remove("checked");
+                    this.lockedStar = false;
+                } else {
+                    this.$element.querySelector('.checked')?.classList.remove("checked");
+                    target.classList.add('checked');
+                    const { offsetX } = e;
+                    const index = parseInt(target.dataset.point, 10) - 1;
+                    const { width } = target.getClientRects()[0];
+                    const isOverHalf = offsetX > width / 2;
+
+                    this.renderStar({clientIndex: index,  isOverHalf});
+                    this.lockedStar = true;
+
+                }
+
             }
         })
     }

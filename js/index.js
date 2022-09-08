@@ -23,6 +23,7 @@ import ProcessAjax from "./ajax/ProcessAjax.js";
 import ProgressAjax from "./ajax/ProgressAjax.js";
 import StarAjax from "./ajax/StarAjax.js";
 import ButtonLink from "./Button.js";
+import Navigation from "./Navigation.js";
 
 // 정적
 document.querySelectorAll('.form-select').forEach(el => new Select(el));
@@ -35,6 +36,7 @@ document.querySelectorAll('.btn[data-link]').forEach(el => new ButtonLink(el));
 document.querySelectorAll('.tabs').forEach(el => new Tab(el));
 document.querySelectorAll('.progress').forEach(el => new Progress(el));
 document.querySelectorAll(".accordion").forEach(el => new Accordion(el));
+document.querySelectorAll('.navbar').forEach(el => new Navigation(el));
 document.querySelectorAll('.tabs').forEach(el => new Tab(el));
 document.querySelectorAll('.table').forEach(el => new Table(el));
 document.querySelectorAll('.dropdown').forEach(el => new Dropdown(el));

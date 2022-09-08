@@ -89,6 +89,10 @@ export default class Calendar extends Component {
 
     setEvents() {
         this.$element?.addEventListener('click', ({target}) => {
+            if(target.classList.contains('calendar-btn')) {
+                this.$element.querySelector('.calendar')?.classList.toggle('show');
+            }
+
             if(target.classList.contains('prev')) {
                 --this.month;
                 if(this.month === 0) {
@@ -105,10 +109,6 @@ export default class Calendar extends Component {
                     ++this.year
                 }
                 this.render();
-            }
-
-            if(target.classList.contains('calendar-btn')) {
-                this.$element.querySelector('.calendar')?.classList.toggle('show');
             }
 
             if(target.classList.contains('day')) {

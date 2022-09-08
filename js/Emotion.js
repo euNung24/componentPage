@@ -20,18 +20,32 @@ export default class Emotion extends Component {
     }
 
     setEvents() {
-        this.$element.querySelector('.clicked-emotion').addEventListener('click', () => {
-            this.$element.querySelector('.emotion-group').style.display = "block";
-        })
+        const regex = /emotion-good|emotion-sad|emotion-like|emotion-bad|emotion-thumbsUp|emotion-thumbsDown/g;
 
         this.$element.querySelector('.emotion-group').addEventListener('click', ({target}) => {
-            const regex = /emotion-good|emotion-sad|emotion-like|emotion-bad|emotion-thumbsUp|emotion-thumbsDown/g;
             const clickedEl = this.$element.querySelector('.clicked-emotion');
-            clickedEl.className = clickedEl.className.replace(regex, '')
+            clickedEl.className = clickedEl.className.replace(regex, '');
             clickedEl.classList.add(target.classList);
-            clickedEl.textContent = '';
+            clickedEl.innerHTML = `<span class="remove-emotion">x</span>`;
+            const { width } = clickedEl.getBoundingClientRect();
+            this.$element.querySelector('.remove-emotion').style.left = Number(width) + 10 + 'px';
             clickedEl.style.verticalAlign = "middle";
             this.$element.querySelector('.emotion-group').style.display = "none";
+        })
+
+        this.$element.addEventListener('click', ({target}) => {
+            if(target.classList.contains('clicked-emotion')) {
+                this.$element.querySelector('.emotion-group').style.display = "block";
+            }
+
+
+            if(target.classList.contains('remove-emotion')) {
+                const clickedEl = this.$element.querySelector('.clicked-emotion');
+                clickedEl.className = clickedEl.className.replace(regex, '');
+                clickedEl.textContent = "+";
+            }
+
+
         })
     }
 }

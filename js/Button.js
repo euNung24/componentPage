@@ -8,7 +8,7 @@ export default class ButtonLink extends Component {
                 // const openNewWindow = window.open("about:blank",'', 'width=400, height=400, scrollbars=no, resizable=no, toolbars=no, menubar=no');
                 openNewWindow.location.href = this.$element.dataset.link;
             } else {
-                window.location = this.$element.dataset.link;
+                window.location.href = this.$element.dataset.link;
             }
         })
     }

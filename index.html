@@ -20,11 +20,11 @@
     <link rel="stylesheet" href="css/star.css">
     <link rel="stylesheet" href="css/emotion.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="../../../AppData/Local/Temp/index.css">
 </head>
 <body>
 <!--<form action="https://www.naver.com"><button class="btn btn-link">버튼</button></form>-->
 <a href="page2.html" class="btn">page2</a>
-
 <h1>정적</h1>
 <h2>Form Component</h2>
 
@@ -119,12 +119,12 @@
 <h4>시간 label 포함</h4>
 <div class="form-group">
     <label class="form-label">Label</label>
-    <div class="form-time" data-start="12:10" data-end="24:00" data-min="10" data-hour="3">
+    <div class="form-time" data-step="10">
         <input class="form-time-input" name="time" type="time">
     </div>
 </div>
 <h4>시간 label 생략</h4>
-<div class="form-time" data-start="12:50" data-end="24:00" data-min="30" data-hour="1">
+<div class="form-time" data-step="15">
     <input class="form-time-input" name="time" type="time">
 </div>
 
@@ -230,55 +230,55 @@
 <h3>Table Component</h3>
 <table class="table">
     <thead>
-        <tr>
-            <th colspan="2">구분</th>
-            <th colspan="2">점수</th>
-        </tr>
+    <tr>
+        <th colspan="2">구분</th>
+        <th colspan="2">점수</th>
+    </tr>
     </thead>
     <tbody>
-        <tr>
-            <th colspan="4">기반역량</th>
-        </tr>
-        <tr>
-            <td>인성</td>
-            <td>전체평균</td>
-            <td>
-                <div style="height: 16px" class="progress" data-min="0" data-max="5" data-value="4.8">
-                    <div style="height: 16px" class="progress-bar"></div>
-                </div>
-            </td>
-            <td>4.5</td>
-        </tr>
-        <tr>
-            <td>기초학력</td>
-            <td>전체평균</td>
-            <td>
-                <div style="height: 16px" class="progress" data-min="0" data-max="5" data-value="3.5">
-                    <div style="height: 16px" class="progress-bar"></div>
-                </div>
-            </td>
-            <td>3.5</td>
-        </tr>
-        <tr>
-            <td>자기관리</td>
-            <td>전체평균</td>
-            <td>
-                <div style="height: 16px" class="progress" data-min="0" data-max="5" data-value="4.0">
-                    <div style="height: 16px" class="progress-bar"></div>
-                </div>
-            </td>
-            <td>4.5</td>
-        </tr>
-        <tr>
-            <td>정보 IT</td>
-            <td>전체평균</td>
-            <td>
-                <div style="height: 16px" class="progress" data-min="0" data-max="5" data-value="4.6">
-                    <div style="height: 16px" class="progress-bar"></div>
-                </div>
-            </td>
-            <td>4.5</td>
-        </tr>
+    <tr>
+        <th colspan="4">기반역량</th>
+    </tr>
+    <tr>
+        <td>인성</td>
+        <td>전체평균</td>
+        <td class="mobile-hide">
+            <div style="height: 16px" class="progress" data-min="0" data-max="5" data-value="4.8">
+                <div style="height: 16px" class="progress-bar"></div>
+            </div>
+        </td>
+        <td>4.5</td>
+    </tr>
+    <tr>
+        <td>기초학력</td>
+        <td>전체평균</td>
+        <td class="mobile-hide">
+            <div style="height: 16px" class="progress" data-min="0" data-max="5" data-value="3.5">
+                <div style="height: 16px" class="progress-bar"></div>
+            </div>
+        </td>
+        <td>3.5</td>
+    </tr>
+    <tr>
+        <td>자기관리</td>
+        <td>전체평균</td>
+        <td class="mobile-hide">
+            <div style="height: 16px" class="progress" data-min="0" data-max="5" data-value="4.0">
+                <div style="height: 16px" class="progress-bar"></div>
+            </div>
+        </td>
+        <td>4.5</td>
+    </tr>
+    <tr>
+        <td>정보 IT</td>
+        <td>전체평균</td>
+        <td class="mobile-hide">
+            <div style="height: 16px" class="progress" data-min="0" data-max="5" data-value="4.6">
+                <div style="height: 16px" class="progress-bar"></div>
+            </div>
+        </td>
+        <td>4.5</td>
+    </tr>
     </tbody>
 </table>
 <table class="table">
@@ -331,17 +331,17 @@
 <h3>Pagination Component</h3>
 <nav>
     <ul class="pagination">
-        <li  class= "page-item">
-            <a href="#"  class= "page-link">&lt;</a>
+        <li class="page-item">
+            <a href="#" class="page-link">&lt;</a>
         </li>
-        <li  class= "page-item active">
-            <a href="#" class= "page-link">1</a>
+        <li class="page-item active">
+            <a href="#" class="page-link">1</a>
         </li>
-        <li  class= "page-item">
-            <a href="#" class= "page-link">2</a>
+        <li class="page-item">
+            <a href="#" class="page-link">2</a>
         </li>
-        <li  class= "page-item">
-            <a href="#" class= "page-link">&gt</a>
+        <li class="page-item">
+            <a href="#" class="page-link">&gt</a>
         </li>
     </ul>
 </nav>
@@ -355,10 +355,10 @@
         Component
     </a>
     <ul class="nav">
-        <li  class="nav-item">
+        <li class="nav-item">
             <a href="#" class="nav-link">menu1</a>
         </li>
-        <li  class="nav-item dropdown active">
+        <li class="nav-item dropdown active">
             <a href="#" class="nav-link dropdown-toggle">menu2</a>
             <ul class="dropdown-menu">
                 <li class="dropdown-item"><a href="#">menu2-1</a></li>
@@ -367,10 +367,10 @@
                 <li class="dropdown-item"><a href="#">menu2-4</a></li>
             </ul>
         </li>
-        <li  class="nav-item">
+        <li class="nav-item">
             <a href="#" class="nav-link">menu3</a>
         </li>
-        <li  class="nav-item">
+        <li class="nav-item">
             <a href="#" class="nav-link">menu4</a>
         </li>
     </ul>
@@ -387,16 +387,25 @@
         <li data-id="#tab8" class="tab-item">서비스 현황</li>
     </nav>
     <div class="tab-list " id="tab5">
-        우는 우리의 방지하는 뜨거운지라, 이것이다. 인간에 반짝이는 노래하며 일월과 밥을 사막이다. 사는가 광야에서 튼튼하며, 바로 우리의 구할 생생하며, 끓는 돋고, 봄바람이다. 피어나는 풍부하게 열락의 투명하되 불어 심장의 힘있다. 그들은 피가 피어나기 긴지라 청춘의 우리의 그들의 봄바람을 하였으며, 것이다. 힘차게 위하여, 노래하며 구하지 있는 뭇 시들어 것이다. 하는 것이 것은 무한한 이것이다. 끓는 낙원을 장식하는 들어 때까지 되려니와, 보는 철환하였는가? 붙잡아 스며들어 그들은 그림자는 목숨이 산야에 인생에 얼마나 우는 것이다. 심장의 들어 두기 그와 공자는 이상 그림자는 것이 것이다. 만천하의 긴지라 석가는 이상 것은 찾아다녀도, 것이다.
+        우는 우리의 방지하는 뜨거운지라, 이것이다. 인간에 반짝이는 노래하며 일월과 밥을 사막이다. 사는가 광야에서 튼튼하며, 바로 우리의 구할 생생하며, 끓는 돋고, 봄바람이다. 피어나는 풍부하게 열락의
+        투명하되 불어 심장의 힘있다. 그들은 피가 피어나기 긴지라 청춘의 우리의 그들의 봄바람을 하였으며, 것이다. 힘차게 위하여, 노래하며 구하지 있는 뭇 시들어 것이다. 하는 것이 것은 무한한 이것이다.
+        끓는 낙원을 장식하는 들어 때까지 되려니와, 보는 철환하였는가? 붙잡아 스며들어 그들은 그림자는 목숨이 산야에 인생에 얼마나 우는 것이다. 심장의 들어 두기 그와 공자는 이상 그림자는 것이 것이다.
+        만천하의 긴지라 석가는 이상 것은 찾아다녀도, 것이다.
     </div>
     <div class="tab-list" id="tab6">
-        얼음과 열락의 가장 트고, 같이, 거선의 위하여서. 청춘의 원질이 우리의 그들의 얼마나 풍부하게 투명하되 아름다우냐? 보는 생명을 대고, 대한 귀는 봄바람을 남는 두기 사는가 것이다. 찾아다녀도, 공자는 길을 내는 끝에 이상 이상 있는 부패뿐이다. 때에, 우리의 풍부하게 피는 인생을 고행을 것이다. 인간은 인간이 산야에 것이다. 끝에 이것이야말로 인간에 든 생생하며, 있는가? 날카로우나 열매를 청춘 청춘의 운다. 그것을 이것이야말로 가장 인도하겠다는 피어나기 말이다. 옷을 미인을 있으며, 때문이다.
+        얼음과 열락의 가장 트고, 같이, 거선의 위하여서. 청춘의 원질이 우리의 그들의 얼마나 풍부하게 투명하되 아름다우냐? 보는 생명을 대고, 대한 귀는 봄바람을 남는 두기 사는가 것이다. 찾아다녀도,
+        공자는 길을 내는 끝에 이상 이상 있는 부패뿐이다. 때에, 우리의 풍부하게 피는 인생을 고행을 것이다. 인간은 인간이 산야에 것이다. 끝에 이것이야말로 인간에 든 생생하며, 있는가? 날카로우나 열매를
+        청춘 청춘의 운다. 그것을 이것이야말로 가장 인도하겠다는 피어나기 말이다. 옷을 미인을 있으며, 때문이다.
     </div>
     <div class="tab-list" id="tab7">
-        긴지라 풀밭에 일월과 살 가슴에 작고 뿐이다. 풀밭에 소리다.이것은 희망의 온갖 스며들어 석가는 뿐이다. 있음으로써 인류의 주는 소리다.이것은 보배를 우리 웅대한 사라지지 봄바람이다. 사랑의 청춘을 낙원을 그들의 굳세게 봄바람을 미인을 그리하였는가? 천하를 어디 예가 얼마나 꽃이 품었기 소리다.이것은 듣는다. 이상의 곳으로 보배를 끝에 찬미를 곳이 황금시대의 앞이 그리하였는가? 이상은 불어 피가 하였으며, 것이다. 산야에 튼튼하며, 같이 가슴이 것이다.보라, 것이다. 방황하여도, 이것은 같은 귀는 설산에서 싸인 사막이다.
+        긴지라 풀밭에 일월과 살 가슴에 작고 뿐이다. 풀밭에 소리다.이것은 희망의 온갖 스며들어 석가는 뿐이다. 있음으로써 인류의 주는 소리다.이것은 보배를 우리 웅대한 사라지지 봄바람이다. 사랑의 청춘을
+        낙원을 그들의 굳세게 봄바람을 미인을 그리하였는가? 천하를 어디 예가 얼마나 꽃이 품었기 소리다.이것은 듣는다. 이상의 곳으로 보배를 끝에 찬미를 곳이 황금시대의 앞이 그리하였는가? 이상은 불어 피가
+        하였으며, 것이다. 산야에 튼튼하며, 같이 가슴이 것이다.보라, 것이다. 방황하여도, 이것은 같은 귀는 설산에서 싸인 사막이다.
     </div>
     <div class="tab-list" id="tab8">
-        끓는 청춘을 이것을 원대하고, 이것이다. 예가 있는 얼음 끓는 구하지 원질이 미인을 것이다. 무엇이 청춘 구할 풀이 두기 위하여 없는 듣는다. 이상 위하여서 천자만홍이 것이다. 우리 방황하였으며, 청춘 이것이다. 날카로우나 온갖 불러 듣는다. 옷을 전인 청춘 예수는 것이다. 평화스러운 이것은 얼음 노래하며 않는 있음으로써 무엇을 황금시대의 산야에 교향악이다. 인간의 부패를 풍부하게 것이다. 만물은 따뜻한 것은 웅대한 천지는 인생의 소담스러운 희망의 사는가 봄바람이다.
+        끓는 청춘을 이것을 원대하고, 이것이다. 예가 있는 얼음 끓는 구하지 원질이 미인을 것이다. 무엇이 청춘 구할 풀이 두기 위하여 없는 듣는다. 이상 위하여서 천자만홍이 것이다. 우리 방황하였으며, 청춘
+        이것이다. 날카로우나 온갖 불러 듣는다. 옷을 전인 청춘 예수는 것이다. 평화스러운 이것은 얼음 노래하며 않는 있음으로써 무엇을 황금시대의 산야에 교향악이다. 인간의 부패를 풍부하게 것이다. 만물은
+        따뜻한 것은 웅대한 천지는 인생의 소담스러운 희망의 사는가 봄바람이다.
     </div>
 </div>
 
@@ -426,42 +435,42 @@
 <div class="accordion">
     <div class="accordion-item">
         <h2 class="accordion-header">
-            <button  class= "accordion-toggle" id="accordionMenu1">
+            <button class="accordion-toggle" id="accordionMenu1">
                 인공지능
             </button>
         </h2>
         <ul class="accordion-body">
-            <li class= "accordion-body-item">
+            <li class="accordion-body-item">
                 <a href="#">정보관리기술사</a>
             </li>
-            <li class= "accordion-body-item">
+            <li class="accordion-body-item">
                 <a href="#">정보처리기능사</a>
             </li>
-            <li class= "accordion-body-item">
+            <li class="accordion-body-item">
                 <a href="#">정보처리기사</a>
             </li>
-            <li class= "accordion-body-item">
+            <li class="accordion-body-item">
                 <a href="#">정보처리산업기사</a>
             </li>
         </ul>
     </div>
     <div class="accordion-item">
         <h2 class="accordion-header">
-            <button  class= "accordion-toggle" id="accordionMenu2">
+            <button class="accordion-toggle" id="accordionMenu2">
                 인공지능
             </button>
         </h2>
         <ul class="accordion-body">
-            <li class= "accordion-body-item">
+            <li class="accordion-body-item">
                 <a href="#">정보관리기술사</a>
             </li>
-            <li class= "accordion-body-item">
+            <li class="accordion-body-item">
                 <a href="#">정보처리기능사</a>
             </li>
-            <li class= "accordion-body-item">
+            <li class="accordion-body-item">
                 <a href="#">정보처리기사</a>
             </li>
-            <li class= "accordion-body-item">
+            <li class="accordion-body-item">
                 <a href="#">정보처리산업기사</a>
             </li>
         </ul>
@@ -596,6 +605,6 @@
 <!--<div class="emotion">-->
 
 </div>
-    <script src="./js/index.js" type="module"></script>
+<script src="./js/index.js" type="module"></script>
 </body>
 </html>
