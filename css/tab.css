@@ -14,6 +14,15 @@
 }
 
 .tab-list {
-    width: 40%;
     display: none;
+}
+
+@media all and (max-width: 768px) {
+    .tab-item {
+        max-width: 70px;
+        height: 35px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
 }

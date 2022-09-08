@@ -1,5 +1,5 @@
 input[type="time"] {
-    display: none;
+    /*display: none;*/
 }
 
 .form-time > *{
@@ -8,36 +8,61 @@ input[type="time"] {
 
 .time-wrapper {
     display: none;
+    position: relative;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 1);
 }
 
 .time-wrapper.show {
     display: flex;
-}
-
-.hour-box, .minute-box {
+    height: 150px;
+    width: max-content;
     position: relative;
 }
 
-.hour, .minute {
-    left: 0;
-    max-height: 200px;
-    overflow: scroll;
-}
-
-.hour.show, .minute.show {
+.day-night > * {
     display: block;
 }
 
-.hour::-webkit-scrollbar, .minute::-webkit-scrollbar {
-    display: none;
+.time-box {
+    display: inline-block;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
 }
 
-.hour > * , .minute > * {
-    background: antiquewhite;
-    margin: 3px 0;
-    padding: 3px;
+.time-group {
+    margin: 2px;
     cursor: pointer;
 }
+
+/*.time-mark {*/
+/*    background: #1ea7fd;*/
+/*}*/
+
+/*.hour-box, .minute-box {*/
+/*    position: relative;*/
+/*}*/
+
+/*.hour, .minute {*/
+/*    left: 0;*/
+/*    max-height: 200px;*/
+/*    overflow: scroll;*/
+/*}*/
+
+/*.hour.show, .minute.show {*/
+/*    display: block;*/
+/*}*/
+
+/*.hour::-webkit-scrollbar, .minute::-webkit-scrollbar {*/
+/*    display: none;*/
+/*}*/
+
+/*.hour > * , .minute > * {*/
+/*    background: antiquewhite;*/
+/*    margin: 3px 0;*/
+/*    padding: 3px;*/
+/*    cursor: pointer;*/
+/*}*/
 
 .selected {
     background: lightblue;

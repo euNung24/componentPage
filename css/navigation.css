@@ -14,12 +14,13 @@ ul {
     vertical-align: middle;
 }
 
-.nav-brand + .nav {
-    display: inline-flex;
-}
 .nav {
     display: flex;
     text-align: center;
+}
+
+.nav-brand + .nav {
+    display: inline-flex;
 }
 
 .nav > li {
@@ -33,7 +34,6 @@ ul {
 }
 
 .nav-menu {
-
     border-top: 1px solid #000;
     display: none;
 }
@@ -42,4 +42,62 @@ ul {
     padding: 5px 10px;
 
     border-bottom: 1px solid #ccc;
+}
+
+.nav-hamburger-box {
+    display: none;
+}
+
+@media all and (max-width: 768px) {
+    .nav-hamburger-box {
+        display: block;
+        width: 20px;
+        height: 3px;
+        position: fixed;
+        background: black;
+        top: 20px;
+        right: 20px;
+        z-index: 10;
+    }
+
+    .nav-hamburger-box::before {
+        content: "";
+        display: block;
+        position: absolute;
+        background: black;
+        top: -5px;
+        left: 0;
+        right: 0;
+        width: 20px;
+        height: 3px;
+    }
+
+    .nav-hamburger-box::after {
+        content: "";
+        display: block;
+        position: absolute;
+        background: black;
+        bottom: -5px;
+        left: 0;
+        right: 0;
+        width: 20px;
+        height: 3px;
+    }
+
+    .nav, .nav-brand + .nav {
+        display: none;
+    }
+
+    .nav.show {
+        display: flex;
+        background: #fff;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        padding-top: 30px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }

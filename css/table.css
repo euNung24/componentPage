@@ -99,3 +99,9 @@
     align-items: center;
     z-index: 1;
 }
+
+@media all and (max-width: 468px) {
+    .mobile-hide {
+        display: none;
+    }
+}

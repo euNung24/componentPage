@@ -1,6 +1,6 @@
 .form-range, .form-range-ajax {
     position: relative;
-    width: 400px;
+    width: 100%;
 }
 
 .slider {
