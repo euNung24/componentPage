@@ -11,7 +11,7 @@ export default class Tab extends Component {
             if (!target.classList.contains('tab-item')) {
                 return;
             }
-            const id = target.dataset.id;
+            const id = target.dataset.id || target.getAttribute('href');
             this.$element.querySelectorAll('.tab-list').forEach(el => el.style.display = 'none');
             this.$element.querySelector(id).style.display = 'block';
             this.$element.querySelector('.active').classList.remove('active')

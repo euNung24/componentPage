@@ -44,6 +44,10 @@ export default class Star extends Component {
         })
 
         this.$element.addEventListener('click', (e) => {
+            if(!this.$element.classList.contains('eval')) {
+                return;
+            }
+
             const { target } = e;
             if(target.classList.contains("reset-btn")) {
                 this.$element.querySelector('.checked')?.classList.remove("checked");

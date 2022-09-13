@@ -57,7 +57,7 @@ ul {
         background: black;
         top: 20px;
         right: 20px;
-        z-index: 10;
+        z-index: 9999;
     }
 
     .nav-hamburger-box::before {
@@ -99,5 +99,7 @@ ul {
         padding-top: 30px;
         flex-direction: column;
         justify-content: space-between;
+        overflow: hidden;
+        z-index: 9990;
     }
 }

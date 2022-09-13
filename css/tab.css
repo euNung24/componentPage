@@ -9,6 +9,10 @@
     padding: 5px 10px;
 }
 
+.tab-item[title]:hover {
+    display: none;
+}
+
 .tab-item.active {
     background: lightblue;
 }
@@ -18,11 +22,20 @@
 }
 
 @media all and (max-width: 768px) {
+    .tab {
+        display: flex;
+    }
+
     .tab-item {
-        max-width: 70px;
-        height: 35px;
+        flex: 1;
+        flex-shrink: 0;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+    }
+
+    .tab-item.active {
+        min-width: fit-content;
+        text-overflow: initial;
     }
 }

@@ -10,7 +10,8 @@
     "dev": "webpack-dev-server",
     "data": "json-server data.json --port 3000",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic --project-token=a5246619f865"
   },
   "author": "",
   "license": "ISC",
@@ -19,19 +20,24 @@
   },
   "devDependencies": {
     "@babel/core": "^7.18.13",
-    "@storybook/addon-actions": "^6.5.10",
-    "@storybook/addon-essentials": "^6.5.10",
-    "@storybook/addon-interactions": "^6.5.10",
-    "@storybook/addon-links": "^6.5.10",
+    "@storybook/addon-actions": "^6.5.11",
+    "@storybook/addon-essentials": "^6.5.11",
+    "@storybook/addon-interactions": "^6.5.11",
+    "@storybook/addon-links": "^6.5.11",
+    "@storybook/builder-webpack4": "^6.5.11",
     "@storybook/builder-webpack5": "^6.5.10",
-    "@storybook/html": "^6.5.10",
+    "@storybook/html": "^6.5.11",
+    "@storybook/manager-webpack4": "^6.5.11",
     "@storybook/manager-webpack5": "^6.5.10",
     "@storybook/testing-library": "^0.0.13",
     "babel-loader": "^8.2.5",
+    "chromatic": "^6.9.0",
     "html-webpack-plugin": "^5.5.0",
     "json-server": "^0.17.0",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.10.1"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "signup@1.0.0"
 }
